@@ -46,8 +46,8 @@ class Fraccion
    	end
 	
 	def div(other)
-	    a = @a * other.a
-	    b = @b * other.b
+	    a = @a * other.b
+	    b = @b * other.a
 	    sum = Fraccion.new(a, b)
               
         end
