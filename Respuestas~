@@ -1,11 +1,14 @@
-1.el error esta en el while == 0, p q nunca va a entrar dentro del while, p q como v es igual a 0, y como esta inicializada a 3, no entrara nunca.
 
-2.
+2.1.) ¿Cuál es el error en el código del método para calcular el máximo común divisor?
+
+
+El error esta en el while == 0, p q nunca va a entrar dentro del while, p q como v es igual a 0, y como esta inicializada a 3, no entrara nunca.
+
+2.2.) ¿Qué comandos del depurador utilizó para detectarlo? Describa la sesión de depuración.
 
 ruby -rdebug gcd.rb ejecutamos el depurador
 
-comando s --> ver paso a paso
-comando v l--> ver las variables locales
+comando s [tep] --> ver paso a paso
+comando v [ar] l[ocal]--> ver las variables locales
 
-3.
-
+2.3.) Escriba la dirección 'HTTP' del repositorio que contiene el desarrollo de su práctica.
