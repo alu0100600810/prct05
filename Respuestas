@@ -1,0 +1,11 @@
+1.el error esta en el while == 0, p q nunca va a entrar dentro del while, p q como v es igual a 0, y como esta inicializada a 3, no entrara nunca.
+
+2.
+
+ruby -rdebug gcd.rb ejecutamos el depurador
+
+comando s [tep] --> ver paso a paso
+comando v [ar] l[ocal]--> ver las variables locales
+
+3.
+
