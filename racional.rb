@@ -52,14 +52,14 @@ class Fraccion
 end
 
 
-a = Fraccion.new(1, 4)
-b = Fraccion.new(1, 2)
-puts "El valor de a es:"; puts a;
-puts " El valor de b es:" ;puts b;
-puts"La suma es:" ;puts a.suma(b)
-puts"La resta es:" ;puts a.resta(b)
-puts"La multiplicacion es:" ; puts a.mult(b)
-puts" La division es :"; puts a.div(b)
+#a = Fraccion.new(1, 4)
+#b = Fraccion.new(1, 2)
+#puts "El valor de a es:"; puts a;
+#puts " El valor de b es:" ;puts b;
+#puts"La suma es:" ;puts a.suma(b)
+#puts"La resta es:" ;puts a.resta(b)
+#puts"La multiplicacion es:" ; puts a.mult(b)
+#puts" La division es :"; puts a.div(b)
 
 
 
