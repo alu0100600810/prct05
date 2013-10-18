@@ -5,27 +5,64 @@ require "./gcd.rb"
 
 class Fraccion
 
-	attr_reader :x, :y
+	attr_reader :a, :b
 
 
-	 def initialize(x,y)
-     	    @x,@y = x, y
-     	 end
+	def initialize(a,b)   #inicialisamos, donde a es el numerador y b es el denominador
+     	    @a,@b = a, b
 
-	def to_s        # Return a String that represents this point
-    	   "(#@x,#@y)"   # Just interpolate the instance variables into a string
+	    mcm = gcd(a, b)
+	    @a = a/mcm
+	    @b = b/mcm	
+        end
+
+	
+
+
+	def to_s        # devuelve una cadena con la representacion del racional
+    	   "#{@a}/#{@b}"   
     	end
 
-	def +(other)         # Define + to do vector addition
-    	    Point.new(@x + other.x, @y + other.y)
+	def suma(other)         # Es la suma 
+    	    a = (@a * other.b) + (@b * other.a)
+	    b = @b * other.b
+	    Fraccion.new(a, b)
+	   
+		
     	end
 
-	def -@               # Define unary minus to negate both coordinates
-    	    Point.new(-@x, -@y)
+	def resta(other)               # Es la resta
+    	   a = (@a * other.b) - (@b * other.a)
+	   b = @b * other.b
+	   Fraccion.new(a, b)
+	  
     	end
 
-	def *(scalar)        # Define * to perform scalar multiplication
-   	    return Point.new(@x*scalar,   @y*scalar) if scalar.is_a? Numeric
-    	    return Point.new(@x*scalar.x, @y*scalar.y) if scalar.is_a? Point
-   	 end
+	def mult(other)        # Esta es la multiplicacion
+   	    a = @a * other.a
+	    b = @b * other.b
+	    Fraccion.new(a, b)
+            
+   	end
+	
+	def div(other)
+	    a = @a * other.b
+	    b = @b * other.a
+	    Fraccion.new(a, b)
+              
+        end
 end
+
+
+a = Fraccion.new(1, 4)
+b = Fraccion.new(1, 2)
+puts "El valor de a es:"; puts a;
+puts " El valor de b es:" ;puts b;
+puts"La suma es:" ;puts a.suma(b)
+puts"La resta es:" ;puts a.resta(b)
+puts"La multiplicacion es:" ; puts a.mult(b)
+puts" La division es :"; puts a.div(b)
+
+
+
+
